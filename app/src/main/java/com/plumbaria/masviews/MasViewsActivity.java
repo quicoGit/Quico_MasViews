@@ -19,8 +19,10 @@ public class MasViewsActivity extends AppCompatActivity {
         salida = (TextView)findViewById(R.id.salida);
     }
     public void sePulsa(View view){
-        salida.setText(String.valueOf(
-                Float.parseFloat(entrada.getText().toString())*2.0));
+        if(entrada.getText().toString().equals("")) {
+        }else {
+            salida.setText(String.valueOf(Float.parseFloat(entrada.getText().toString()) * 2.0));
+        }
     }
     public void sePulsa0(View view){
         entrada.setText(entrada.getText()+(String)view.getTag());
